@@ -145,7 +145,6 @@
 				05785A069435B894C52D4915 /* Pods-SDKRNDemo-SDKRNDemoTests.debug.xcconfig */,
 				0E254DDF4275B7EF218FA82C /* Pods-SDKRNDemo-SDKRNDemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -161,6 +160,7 @@
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
 				FC36E18E74468ABD1AB54BB4 /* [CP] Copy Pods Resources */,
+				97C8A6A5871AA1085B8D25DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +183,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				DD2A1D4A2CA322F309C0CAB2 /* [CP] Copy Pods Resources */,
+				EDF2B75AF7A7AF8D60016D54 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,6 +286,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		97C8A6A5871AA1085B8D25DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDKRNDemo-SDKRNDemoTests/Pods-SDKRNDemo-SDKRNDemoTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDKRNDemo-SDKRNDemoTests/Pods-SDKRNDemo-SDKRNDemoTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDKRNDemo-SDKRNDemoTests/Pods-SDKRNDemo-SDKRNDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B709DEBAA23705D839245867 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,6 +340,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDKRNDemo/Pods-SDKRNDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDF2B75AF7A7AF8D60016D54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDKRNDemo/Pods-SDKRNDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDKRNDemo/Pods-SDKRNDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDKRNDemo/Pods-SDKRNDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FC36E18E74468ABD1AB54BB4 /* [CP] Copy Pods Resources */ = {
@@ -449,6 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JHVD9NA6RN;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SDKRNDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,6 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JHVD9NA6RN;
 				INFOPLIST_FILE = SDKRNDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
