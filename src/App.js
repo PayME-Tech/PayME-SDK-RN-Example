@@ -22,10 +22,11 @@ const PAY_CODE = {
   PAYME: 'PAYME',
   ATM: 'ATM',
   CREDIT: 'CREDIT',
+  // VN_PAY: 'VN_PAY',
   MANUAL_BANK: 'MANUAL_BANK',
-  VN_PAY: 'VN_PAY',
   MOMO: 'MOMO',
   ZALO_PAY: 'ZALO_PAY',
+  VIET_QR: 'VIET_QR',
 };
 
 const App = () => {
@@ -188,13 +189,13 @@ const App = () => {
     );
   };
 
-  const pay = ({payCode, amount = 10000, showUIResult = true}) => {
+  const pay = ({payCode, amount = 10000, userName, showUIResult = true}) => {
     payME.pay(
       amount,
       'note',
       Date.now().toString(),
-      Number(keys.storeId),
-      null,
+      Number(keys?.storeId),
+      userName,
       'extraData',
       showUIResult,
       payCode,
@@ -291,7 +292,7 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
       <KeyboardAvoidingView
         style={{flex: 1}}
         behavior={Platform.OS === 'ios' ? 'padding' : null}>
@@ -511,6 +512,7 @@ const Login = ({userID, setUserID, phone, setPhone, onLogin, onLogout}) => {
           value={userID}
           onChangeText={text => setUserID(text)}
           placeholder="required"
+          placeholderTextColor="grey"
           keyboardType="numeric"
         />
       </View>
@@ -529,6 +531,7 @@ const Login = ({userID, setUserID, phone, setPhone, onLogin, onLogout}) => {
           value={phone}
           onChangeText={text => setPhone(text)}
           placeholder="required"
+          placeholderTextColor="grey"
           keyboardType="numeric"
         />
       </View>
@@ -568,6 +571,7 @@ const FuntionDemo = ({
   const [moneyTransfer, setMoneyTransfer] = useState('10000');
   const [moneyPay, setMoneyPay] = useState('10000');
   const [service, setService] = useState('WATE');
+  const [userName, setUserName] = useState('');
   const [payCode, setPayCode] = useState('');
 
   return (
@@ -629,6 +633,7 @@ const FuntionDemo = ({
             value={moneyDeposit}
             onChangeText={text => setMoneyDeposit(text)}
             placeholder="Nhập số tiền"
+            placeholderTextColor="grey"
             keyboardType="numeric"
             maxLength={9}
           />
@@ -651,6 +656,7 @@ const FuntionDemo = ({
             value={moneyWithdraw}
             onChangeText={text => setMoneyWithdraw(text)}
             placeholder="Nhập số tiền"
+            placeholderTextColor="grey"
             keyboardType="numeric"
             maxLength={9}
           />
@@ -673,6 +679,7 @@ const FuntionDemo = ({
             value={moneyTransfer}
             onChangeText={text => setMoneyTransfer(text)}
             placeholder="Nhập số tiền"
+            placeholderTextColor="grey"
             keyboardType="numeric"
             maxLength={9}
           />
@@ -702,10 +709,37 @@ const FuntionDemo = ({
             flexDirection: 'row',
             marginTop: 15,
           }}>
+          <TextInput
+            style={{
+              flex: 1,
+              padding: 5,
+              paddingHorizontal: 10,
+              borderWidth: 0.5,
+              borderRadius: 5,
+              borderColor: 'grey',
+              backgroundColor: 'white',
+            }}
+            value={userName}
+            autoCapitalize="none"
+            autoCorrect={false}
+            onChangeText={text => setUserName(text)}
+            placeholder="Nhập userName"
+            placeholderTextColor="grey"
+          />
+        </View>
+
+        <View
+          style={{
+            width: '100%',
+            flexDirection: 'row',
+            marginTop: 15,
+          }}>
           <TouchableOpacity
             style={styles.btnDeposit}
             activeOpacity={0.8}
-            onPress={() => pay?.({payCode, amount: Number(moneyPay ?? 0)})}>
+            onPress={() =>
+              pay?.({payCode, amount: Number(moneyPay ?? 0), userName})
+            }>
             <Text>PAY</Text>
           </TouchableOpacity>
           <TextInput
@@ -713,6 +747,7 @@ const FuntionDemo = ({
             value={moneyPay}
             onChangeText={text => setMoneyPay(text)}
             placeholder="Nhập số tiền"
+            placeholderTextColor="grey"
             keyboardType="numeric"
             maxLength={9}
           />

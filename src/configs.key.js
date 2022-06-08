@@ -18,6 +18,7 @@ export const KEY_CONFIGS = {
     env: 'SANDBOX',
     secretKey: 'b5d8cf6c30d9cb4a861036bdde44c137',
     appId: '95',
+    storeId: null,
   },
   dev: {
     appToken:
@@ -59,5 +60,6 @@ export const KEY_CONFIGS = {
     env: 'PRODUCTION',
     secretKey: '0418d21948d904fb6f423998fd1e4714',
     appId: '44',
+    storeId: null,
   },
 };
