@@ -5362,10 +5362,10 @@ react-native-modal-dropdown@^1.0.2:
   dependencies:
     prop-types "^15.6.0"
 
-react-native-payme-sdk@^0.9.42:
-  version "0.9.42"
-  resolved "https://registry.yarnpkg.com/react-native-payme-sdk/-/react-native-payme-sdk-0.9.42.tgz#e561e00913909401dc106b1adec18954a5051428"
-  integrity sha512-jXok3MAxty3zDiJFeO5MiLBE+Pv+lesXjTdww4l3/nEQ1h3XI2CZWIiJuAXe+VKh8hqJyCj4MUqgrFE00Glf7w==
+react-native-payme-sdk@^0.9.43:
+  version "0.9.43"
+  resolved "https://registry.yarnpkg.com/react-native-payme-sdk/-/react-native-payme-sdk-0.9.43.tgz#f6375db495b72d07309c6802232e8645cc8840ac"
+  integrity sha512-kLFegYM/EWM35WVwn7mtvunWB0G6qHlkJdNIKRMwHd/DYf1uUtUnJVrqiR1uRAJYPhv7lf1Io8y35l+FBl8S9A==
   dependencies:
     "@react-native-community/async-storage" "^1.12.0"
     axios "^0.20.0"

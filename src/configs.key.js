@@ -1,24 +1,23 @@
 export const KEY_CONFIGS = {
   sandbox: {
     appToken:
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6MzAsImlhdCI6MTYyMTgyMzQ2N30.02jQIG7fqUckNzQnx0ya52ley4nWCHWt3w6tUrrRAtQ',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6OTUsImlhdCI6MTY1MTczMjM0Nn0.TFsg9wizgtWa7EbGzrjC2Gn55TScsJzKGjfeN78bhlg',
     publicKey: `-----BEGIN PUBLIC KEY-----
-      MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAO4QQwo0WqZONzlJ5CMWDb6eSrO5q14r
-      D05Fc6JeC/ZfjdoO+9+G9RZrpa8eh8hIhdJ4siqHKcSiM/xlXIm6ddECAwEAAQ==
-      -----END PUBLIC KEY-----`,
+    MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAId28RoBckMTTPqVCC3c1f+fH+BbdVvv
+    wDkSf+0zmaUlCFyQpassU3+8CvM6QbeYSYGWp1YIwGqg2wTF94zT4eECAwEAAQ==
+    -----END PUBLIC KEY-----`,
     privateKey: `-----BEGIN RSA PRIVATE KEY-----
-      MIIBOgIBAAJBAMRQjlsYp5aR5IliyM/WsK6JtP79wdXCkyZ/PRV1ZcvyWx5/4A6f
-      9e4G+rGF8tSWjbYs1aRkyd/NY41QX+VBULECAwEAAQJAN5TDKUGKuVOnC8q/JjEX
-      puLwLr2zsoy7Usv1hGzPnHUK+GtCyROvG88K3EM7ouE2amk0BMJY1XZ8x1KkZnuw
-      vQIhAPkFALcE+dsV9G8gDGgTBr8PRmqpkinFzIHcev/wwMhjAiEAydFWDoeCwT2d
-      bbUt/fU/KSaGomp5slt+FZxd9A/tzNsCIQCGj9OBEqlJYCXD3teVbaKZn9F3VcZr
-      2DzYd6Hnp9sk7QIgfgE7b7rfwnML1bFnU8ZJdxHcwY8lCFzjbe7BIl7HpD0CICB5
-      KQhd7pUO2s5oPAvuzi30eI2NIISncH0xGxYAS+nu
-      -----END RSA PRIVATE KEY-----`,
+    MIIBOwIBAAJBAMEKxNcErAKSzmWcps6HVScLctpdDkBiygA3Pif9rk8BoSU0BYAs
+    G5pW8yRmhCwVMRQq+VhJNZq+MejueSBICz8CAwEAAQJBALfa29K1/mWNEMqyQiSd
+    vDotqzvSOQqVjDJcavSHpgZTrQM+YzWwMKAHXLABYCY4K0t01AjXPPMYBueJtFeA
+    i3ECIQDpb6Fp0yGgulR9LHVcrmEQ4ZTADLEASg+0bxVjv9vkWwIhANOzlw9zDMRr
+    i/5bwttz/YBgY/nMj7YIEy/v4htmllntAiA5jLDRoyCOPIGp3nUMpVz+yW5froFQ
+    nfGjPSOb1OgEMwIhAI4FhyvoJQKIm8wyRxDuSXycLbXhU+/sjuKz7V4wfmEpAiBb
+    PmELTX6BquyCs9jUzoPxDWKQSQGvVUwcWXtpnYxSvQ==
+    -----END RSA PRIVATE KEY-----`,
     env: 'SANDBOX',
-    secretKey: 'd0b1240e28a109e052fa34354e9915f9',
-    appId: '30',
-    storeId: 10581207,
+    secretKey: 'b5d8cf6c30d9cb4a861036bdde44c137',
+    appId: '95',
   },
   dev: {
     appToken:
@@ -43,23 +42,22 @@ export const KEY_CONFIGS = {
   },
   production: {
     appToken:
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6NywiaWF0IjoxNjE0OTExMDE0fQ.PJ0ke0Ky_0BoMPi45Cu803VlR8F3e8kOMoNh9I07AR4',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6NDQsImlhdCI6MTY1MjIzMjEwM30.IMhz9dBDKJ736hTaxGaMJhJvQiq7Q1axsm6TiydspAU',
     publicKey: `-----BEGIN PUBLIC KEY-----
-      MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJQKJge1dTHz6Qkyz95X92QnsgDqerCB
-      UzBmt/Qg+5E/oKpw7RBfni3SlCDGotBJH437YvsDBMx8OMCP8ROd7McCAwEAAQ==
-      -----END PUBLIC KEY-----`,
+    MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKRWwS+plGNWsiQiAMUJgBe7wdjhbAbx
+    ZDBqKnAH9hZlRjrdgglBERzy/80/nL8cTI2FWAhEDaR3CewO+nRbaPECAwEAAQ==
+    -----END PUBLIC KEY-----`,
     privateKey: `-----BEGIN RSA PRIVATE KEY-----
-      MIIBOQIBAAJAZCKupmrF4laDA7mzlQoxSYlQApMzY7EtyAvSZhJs1NeW5dyoc0XL
-      yM+/Uxuh1bAWgcMLh3/0Tl1J7udJGTWdkQIDAQABAkAjzvM9t7kD84PudR3vEjIF
-      5gCiqxkZcWa5vuCCd9xLUEkdxyvcaLWZEqAjCmF0V3tygvg8EVgZvdD0apgngmAB
-      AiEAvTF57hIp2hkf7WJnueuZNY4zhxn7QNi3CQlGwrjOqRECIQCHfqO53A5rvxCA
-      ILzx7yXHzk6wnMcGnkNu4b5GH8usgQIhAKwv4WbZRRnoD/S+wOSnFfN2DlOBQ/jK
-      xBsHRE1oYT3hAiBSfLx8OAXnfogzGLsupqLfgy/QwYFA/DSdWn0V/+FlAQIgEUXd
-      A8pNN3/HewlpwTGfoNE8zCupzYQrYZ3ld8XPGeQ=
-      -----END RSA PRIVATE KEY-----`,
+    MIIBOgIBAAJBAI8rsaSa1cOzIDX/XsniS8TeZ9c1Kg0wqH4pIjUfL3z5X6lXDA3G
+    g3uj/sdOJews6zDoXXxTHPkocPGdja98rb8CAwEAAQJAWRQOiyPrLMAeonopN+Mc
+    0Xivky744wwLSbO+HN8yZMazvdvVCGjuXRXf9C2Et3sP5mcz1MlO2Zmq2xi0Lgc7
+    QQIhANh5Z888Pv7dWr+s9o7SHoyeSAuO6NCUA0r2aaxNd+cDAiEAqU/hdSUeGicG
+    HQl7chq14DImAbEplcGoT0l7Z/7aE5UCIQC7Z18XaXCf88G8bmCFBCKuWdjFKNMk
+    vv6axvh00hwbQQIgcIPFMDQabQbB6UoD3zAg7XxmBXnWSM8JKqeKevHBuoECIG3A
+    deJhhdalcQyJMTFIzx3r3+ANrkrd1v7VMsdFfaQ0
+    -----END RSA PRIVATE KEY-----`,
     env: 'PRODUCTION',
-    secretKey: 'bda4d9de88f37efb93342d8764ac9b84',
-    appId: '7',
-    storeId: 25092940,
+    secretKey: '0418d21948d904fb6f423998fd1e4714',
+    appId: '44',
   },
 };

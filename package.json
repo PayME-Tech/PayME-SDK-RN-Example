@@ -13,7 +13,7 @@
     "react": "17.0.2",
     "react-native": "0.67.3",
     "react-native-modal-dropdown": "^1.0.2",
-    "react-native-payme-sdk": "^0.9.42"
+    "react-native-payme-sdk": "^0.9.43"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
