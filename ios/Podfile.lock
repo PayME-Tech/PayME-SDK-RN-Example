@@ -18,7 +18,7 @@ PODS:
   - glog (0.3.5)
   - lottie-ios (3.3.0)
   - PayCardsRecognizer (1.1.7)
-  - PayMESDK (0.9.53):
+  - PayMESDK (0.9.56):
     - Alamofire
     - CryptoSwift (= 1.3.2)
     - lottie-ios
@@ -227,8 +227,8 @@ PODS:
   - React-jsinspector (0.67.3)
   - React-logger (0.67.3):
     - glog
-  - react-native-payme-sdk (0.9.42):
-    - PayMESDK (= 0.9.53)
+  - react-native-payme-sdk (0.9.44):
+    - PayMESDK (= 0.9.56)
     - React
   - React-perflogger (0.67.3)
   - React-RCTActionSheet (0.67.3):
@@ -438,7 +438,7 @@ SPEC CHECKSUMS:
   glog: 85ecdd10ee8d8ec362ef519a6a45ff9aa27b2e85
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   PayCardsRecognizer: 2e4d1b2fdd5f1528fb56064a91e1d58a1af7a2db
-  PayMESDK: 7e1eec8ca7d9ba2768ca90acfebf389e4df560a7
+  PayMESDK: e19dfc84fd0d1aa712d70b7e53f5efc0b333ee52
   RCT-Folly: 803a9cfd78114b2ec0f140cfa6fa2a6bafb2d685
   RCTRequired: 3c77b683474faf23920fbefc71c4e13af21470c0
   RCTTypeSafety: 720b1841260dac692444c2822b27403178da8b28
@@ -451,7 +451,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 15ea57ead631a11fad57634ff69f78e797113a39
   React-jsinspector: 1e1e03345cf6d47779e2061d679d0a87d9ae73d8
   React-logger: 1e10789cb84f99288479ba5f20822ce43ced6ffe
-  react-native-payme-sdk: d4c1bc94be5bfff707d7b6a4d2a4c4ef6798763d
+  react-native-payme-sdk: d751689163322bad3d7c8b8611386173f492afac
   React-perflogger: 93d3f142d6d9a46e635f09ba0518027215a41098
   React-RCTActionSheet: 87327c3722203cc79cf79d02fb83e7332aeedd18
   React-RCTAnimation: 009c87c018d50e0b38692699405ebe631ff4872d
