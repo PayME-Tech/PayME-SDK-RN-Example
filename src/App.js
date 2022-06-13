@@ -572,6 +572,7 @@ const FuntionDemo = ({
   const [moneyPay, setMoneyPay] = useState('10000');
   const [service, setService] = useState('WATE');
   const [userName, setUserName] = useState('');
+  const [description, setDescription] = useState('');
   const [payCode, setPayCode] = useState('');
 
   return (
@@ -615,6 +616,31 @@ const FuntionDemo = ({
           onPress={() => openHistory?.()}>
           <Text>OPEN HISTORY</Text>
         </TouchableOpacity>
+
+        <View
+          style={{
+            width: '100%',
+            flexDirection: 'row',
+            marginTop: 15,
+          }}>
+          <TextInput
+            style={{
+              flex: 1,
+              padding: 5,
+              paddingHorizontal: 10,
+              borderWidth: 0.5,
+              borderRadius: 5,
+              borderColor: 'grey',
+              backgroundColor: 'white',
+            }}
+            value={description}
+            autoCapitalize="none"
+            autoCorrect={false}
+            onChangeText={text => setDescription(text)}
+            placeholder="Nhập description"
+            placeholderTextColor="grey"
+          />
+        </View>
 
         <View
           style={{
@@ -671,7 +697,7 @@ const FuntionDemo = ({
           <TouchableOpacity
             style={styles.btnDeposit}
             activeOpacity={0.8}
-            onPress={() => transfer?.(Number(moneyTransfer ?? 0))}>
+            onPress={() => transfer?.(Number(moneyTransfer ?? 0), description)}>
             <Text>TRANSFER</Text>
           </TouchableOpacity>
           <TextInput
