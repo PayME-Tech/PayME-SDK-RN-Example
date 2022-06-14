@@ -11,6 +11,8 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  TouchableWithoutFeedback,
+  Keyboard,
   View,
 } from 'react-native';
 import {KEY_CONFIGS} from './configs.key';
@@ -296,62 +298,64 @@ const App = () => {
       <KeyboardAvoidingView
         style={{flex: 1}}
         behavior={Platform.OS === 'ios' ? 'padding' : null}>
-        <ScrollView
-          style={{flex: 1, zIndex: 1}}
-          contentContainerStyle={{padding: 10}}
-          bounces={false}>
-          <SelectEnv
-            env={env}
-            setEnv={setEnv}
-            showEditKey={showEditKey}
-            setShowEditKey={setShowEditKey}
-          />
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <Text>Language:</Text>
-            <TouchableOpacity
-              onPress={changeLanguage}
-              style={{borderWidth: 1, marginLeft: 10, padding: 5}}>
-              <Text>{language === LANGUAGES.VIETNAMESE ? 'Vi' : 'En'}</Text>
-            </TouchableOpacity>
-          </View>
-          {showEditKey ? (
-            <EditKey
-              keys={keys}
-              setKeys={setKeys}
-              showLog={showLog}
-              setShowLog={setShowLog}
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+          <ScrollView
+            style={{flex: 1, zIndex: 1}}
+            contentContainerStyle={{padding: 10}}
+            bounces={false}>
+            <SelectEnv
+              env={env}
+              setEnv={setEnv}
+              showEditKey={showEditKey}
+              setShowEditKey={setShowEditKey}
             />
-          ) : (
-            <>
-              <Login
-                phone={phone}
-                setPhone={setPhone}
-                userID={userID}
-                setUserID={setUserID}
-                onLogin={onLogin}
-                onLogout={onLogout}
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <Text>Language:</Text>
+              <TouchableOpacity
+                onPress={changeLanguage}
+                style={{borderWidth: 1, marginLeft: 10, padding: 5}}>
+                <Text>{language === LANGUAGES.VIETNAMESE ? 'Vi' : 'En'}</Text>
+              </TouchableOpacity>
+            </View>
+            {showEditKey ? (
+              <EditKey
+                keys={keys}
+                setKeys={setKeys}
+                showLog={showLog}
+                setShowLog={setShowLog}
               />
-              {isLogin && (
-                <FuntionDemo
-                  balancce={balancce}
-                  getBalance={getWalletInfo}
-                  openWallet={openWallet}
-                  openHistory={openHistory}
-                  deposit={deposit}
-                  withdraw={withdraw}
-                  transfer={transfer}
-                  pay={pay}
-                  getAccountInfo={getAccountInfo}
-                  getSupportedServices={getSupportedServices}
-                  openService={openService}
-                  openKYC={openKYC}
-                  scanQR={scanQR}
-                  payQRCode={payQRCode}
+            ) : (
+              <>
+                <Login
+                  phone={phone}
+                  setPhone={setPhone}
+                  userID={userID}
+                  setUserID={setUserID}
+                  onLogin={onLogin}
+                  onLogout={onLogout}
                 />
-              )}
-            </>
-          )}
-        </ScrollView>
+                {isLogin && (
+                  <FuntionDemo
+                    balancce={balancce}
+                    getBalance={getWalletInfo}
+                    openWallet={openWallet}
+                    openHistory={openHistory}
+                    deposit={deposit}
+                    withdraw={withdraw}
+                    transfer={transfer}
+                    pay={pay}
+                    getAccountInfo={getAccountInfo}
+                    getSupportedServices={getSupportedServices}
+                    openService={openService}
+                    openKYC={openKYC}
+                    scanQR={scanQR}
+                    payQRCode={payQRCode}
+                  />
+                )}
+              </>
+            )}
+          </ScrollView>
+        </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
