@@ -196,7 +196,7 @@ const App = () => {
       amount,
       'note',
       Date.now().toString(),
-      Number(keys?.storeId),
+      0,
       userName,
       'extraData',
       showUIResult,
